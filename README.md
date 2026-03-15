@@ -1,44 +1,63 @@
 # 🎓 PPDB Online — Fullstack Application
 
 ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
-![React](https://img.shields.io/badge/Frontend-React.js-blue?style=for-the-badge&logo=react)
-![Golang](https://img.shields.io/badge/Backend-Golang-00ADD8?style=for-the-badge&logo=go)
+![React](https://img.shields.io/badge/Frontend-React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Golang](https://img.shields.io/badge/Backend-Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![MySQL](https://img.shields.io/badge/Database-MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
 
-Aplikasi **Penerimaan Peserta Didik Baru (PPDB) Online** yang dirancang untuk membantu sekolah dalam mengelola proses pendaftaran siswa baru secara digital dan efisien. Dibangun dengan arsitektur **Full-Stack** modern — Backend yang robust dan Frontend yang interaktif serta responsif.
+Aplikasi **Penerimaan Peserta Didik Baru (PPDB) Online** yang dirancang untuk membantu sekolah dalam mengelola proses pendaftaran siswa baru secara digital, cepat, dan efisien. 
+
+Dibangun dengan arsitektur **Full-Stack** modern — memadukan *Backend* yang tangguh (*robust*) dan *Frontend* yang interaktif serta responsif. Dilengkapi dengan sistem autentikasi keamanan tinggi (JWT) dan antarmuka pengguna *(UI/UX)* bernuansa *Dark Mode* yang elegan.
 
 ---
 
 ## 📌 Daftar Isi
 
-- [Fitur Utama](#-fitur-utama)
-- [Teknologi yang Digunakan](#️-teknologi-yang-digunakan)
-- [Screenshot](#-screenshot)
-- [Cara Menjalankan Proyek](#-cara-menjalankan-proyek)
-- [Pengembang](#-pengembang)
+- [Fitur Utama](#fitur-utama)
+- [Teknologi yang Digunakan](#teknologi-yang-digunakan)
+- [Screenshot](#screenshot)
+- [Cara Menjalankan Proyek](#cara-menjalankan-proyek)
+- [Pengembang](#pengembang)
 
 ---
 
 ## ✨ Fitur Utama
 
+### 👨‍💼 Panel Admin (Pengelola)
 | Fitur | Deskripsi |
-|---|---|
-| 📊 Dashboard | Ringkasan statistik pendaftar: Total, Perlu Verifikasi, Lolos, dan Ditolak |
-| 📋 Verifikasi Pendaftar | Manajemen pendaftar dengan fitur pencarian, filter status, dan aksi verifikasi berkas |
-| 👥 Manajemen Akun | Pengelolaan role dan hak akses akun Admin |
-| 🖨️ Laporan & Ekspor | Ekspor data pendaftar ke format **.xlsx (Excel)** untuk rekapitulasi |
-| 🔒 Autentikasi JWT | Keamanan API menggunakan **JSON Web Token** |
+| :--- | :--- |
+| 🔐 **Login Admin (Sign In)** | Akses masuk aman khusus untuk pengelola sistem PPDB. |
+| 📊 **Dashboard Statistik** | Ringkasan pendaftar secara *real-time* (Total, Perlu Verifikasi, Lolos, Ditolak). |
+| 📋 **Verifikasi Pendaftar**| Manajemen pendaftar dengan pencarian, filter status, dan aksi verifikasi berkas. |
+| 👥 **Manajemen Akun** | Pengelolaan role dan pembuatan hak akses tingkat Admin. |
+
+### 🎓 Portal Siswa (Pendaftar)
+| Fitur | Deskripsi |
+| :--- | :--- |
+| 📝 **Registrasi (Sign Up)** | Pembuatan akun baru bagi calon peserta didik untuk memulai pendaftaran. |
+| 🔑 **Login (Sign In)** | Akses masuk calon siswa untuk melanjutkan atau memantau proses pendaftaran. |
+| 📄 **Formulir Pendaftaran**| Antarmuka pengisian data diri dan kelengkapan pendaftaran secara responsif. |
+| 📁 **Unggah Dokumen** | Fitur unggah berkas persyaratan pendaftaran dengan sistem validasi. |
+| 🔍 **Cek Status Lolos** | Siswa dapat memantau hasil seleksi dan status verifikasi berkas mereka secara langsung. |
+
+### ⚙️ Sistem Inti (Core)
+| Fitur | Deskripsi |
+| :--- | :--- |
+| 🔒 **Autentikasi JWT** | Keamanan login berlapis dan perlindungan API menggunakan **JSON Web Token**. |
 
 ---
 
 ## 🛠️ Teknologi yang Digunakan
 
-**Frontend**
+**💻 Frontend**
 - [React.js](https://reactjs.org/) + [Vite](https://vitejs.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Axios](https://axios-http.com/)
 
-**Backend**
+**⚙️ Backend**
 - [Golang (Go)](https://golang.org/)
 - RESTful API
 - [JWT](https://jwt.io/) — JSON Web Token
