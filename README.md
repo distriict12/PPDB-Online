@@ -1,58 +1,157 @@
-# 🎓 PPDB Online - Fullstack Application
+# 🎓 PPDB Online — Fullstack Application
 
-![PPDB Banner](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
-![React](https://img.shields.io/badge/Frontend-React.js-blue?style=for-the-badge&logo=react)
-![Golang](https://img.shields.io/badge/Backend-Golang-00ADD8?style=for-the-badge&logo=go)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+![React](https://img.shields.io/badge/Frontend-React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Golang](https://img.shields.io/badge/Backend-Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![MySQL](https://img.shields.io/badge/Database-MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
 
-Aplikasi **Penerimaan Peserta Didik Baru (PPDB) Online** yang dirancang khusus untuk mempermudah sekolah dalam mengelola pendaftaran siswa baru secara digital. Proyek ini dibangun dengan arsitektur **Full-Stack** modern, memisahkan logika *Backend* yang tangguh dan *Frontend* yang interaktif & responsif.
+Aplikasi **Penerimaan Peserta Didik Baru (PPDB) Online** yang dirancang untuk membantu sekolah dalam mengelola proses pendaftaran siswa baru secara digital, cepat, dan efisien. 
 
----
-
-## ✨ Fitur Utama (Admin Panel)
-
-* 📊 **Dashboard Utama:** Ringkasan statistik pendaftar (Total, Perlu Verifikasi, Lolos, Ditolak).
-* 📋 **Verifikasi Pendaftar:** Tabel manajemen pendaftar lengkap dengan fitur pencarian, filter, dan aksi verifikasi berkas.
-* 👥 **Manajemen Akun:** Pengelolaan role dan akses akun Admin sistem.
-* 🖨️ **Laporan & Cetak Data:** Ekspor data pendaftar ke dalam format **.xlsx (Excel)** untuk rekapitulasi sekolah.
-* 🔒 **Keamanan JWT:** Autentikasi dan otorisasi API super aman menggunakan JSON Web Token.
+Dibangun dengan arsitektur **Full-Stack** modern — memadukan *Backend* yang tangguh (*robust*) dan *Frontend* yang interaktif serta responsif. Dilengkapi dengan sistem autentikasi keamanan tinggi (JWT) dan antarmuka pengguna *(UI/UX)* bernuansa *Dark Mode* yang elegan.
 
 ---
 
-## 📸 Tangkapan Layar (Screenshots)
+## 📌 Daftar Isi
 
-### 1. Dashboard Utama
-> *(Tarik dan lepas / Drag & Drop gambar screenshot Dashboard Kapten di sini via GitHub)*
-
-### 2. Halaman Verifikasi Pendaftar
-> *(Tarik dan lepas / Drag & Drop gambar screenshot Verifikasi Kapten di sini via GitHub)*
-
-### 3. Manajemen Akun
-> *(Tarik dan lepas / Drag & Drop gambar screenshot Manajemen Akun Kapten di sini via GitHub)*
-
-### 4. Pusat Unduhan / Laporan
-> *(Tarik dan lepas / Drag & Drop gambar screenshot Laporan Kapten di sini via GitHub)*
+- [Fitur Utama](#fitur-utama)
+- [Teknologi yang Digunakan](#teknologi-yang-digunakan)
+- [Screenshot](#screenshot)
+- [Cara Menjalankan Proyek](#cara-menjalankan-proyek)
+- [Pengembang](#pengembang)
 
 ---
 
-## 🛠️ Teknologi yang Digunakan (Tech Stack)
+## ✨ Fitur Utama
 
-**Bagian Frontend (Bodykit):**
-* React.js (Vite)
-* TypeScript
-* Tailwind CSS (Untuk styling UI yang modern & dark mode)
-* Axios (Interaksi API)
+### 👨‍💼 Panel Admin (Pengelola)
+| Fitur | Deskripsi |
+| :--- | :--- |
+| 🔐 **Login Admin (Sign In)** | Akses masuk aman khusus untuk pengelola sistem PPDB. |
+| 📊 **Dashboard Statistik** | Ringkasan pendaftar secara *real-time* (Total, Perlu Verifikasi, Lolos, Ditolak). |
+| 📋 **Verifikasi Pendaftar**| Manajemen pendaftar dengan pencarian, filter status, dan aksi verifikasi berkas. |
+| 👥 **Manajemen Akun** | Pengelolaan role dan pembuatan hak akses tingkat Admin. |
 
-**Bagian Backend (Mesin Utama):**
-* Golang (Go)
-* RESTful API Architecture
-* JWT (JSON Web Token) untuk Autentikasi
-* MySQL
+### 🎓 Portal Siswa (Pendaftar)
+| Fitur | Deskripsi |
+| :--- | :--- |
+| 📝 **Registrasi (Sign Up)** | Pembuatan akun baru bagi calon peserta didik untuk memulai pendaftaran. |
+| 🔑 **Login (Sign In)** | Akses masuk calon siswa untuk melanjutkan atau memantau proses pendaftaran. |
+| 📄 **Formulir Pendaftaran**| Antarmuka pengisian data diri dan kelengkapan pendaftaran secara responsif. |
+| 📁 **Unggah Dokumen** | Fitur unggah berkas persyaratan pendaftaran dengan sistem validasi. |
+| 🔍 **Cek Status Lolos** | Siswa dapat memantau hasil seleksi dan status verifikasi berkas mereka secara langsung. |
+
+### ⚙️ Sistem Inti (Core)
+| Fitur | Deskripsi |
+| :--- | :--- |
+| 🔒 **Autentikasi JWT** | Keamanan login berlapis dan perlindungan API menggunakan **JSON Web Token**. |
 
 ---
 
-## 👨‍💻 Pengembang (Developer)
+## 🛠️ Teknologi yang Digunakan
 
-Dikembangkan dengan penuh dedikasi oleh **[NAMA KAPTEN / USERNAME]**.
-Jika tertarik untuk berkolaborasi atau melihat proyek lainnya, silakan kunjungi profil saya!
+**💻 Frontend**
+- [React.js](https://reactjs.org/) + [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Axios](https://axios-http.com/)
 
-📝 **Lisensi:** Proyek ini dilindungi di bawah **MIT License**.
+**⚙️ Backend**
+- [Golang (Go)](https://golang.org/)
+- RESTful API
+- [JWT](https://jwt.io/) — JSON Web Token
+- [MySQL](https://www.mysql.com/)
+
+---
+
+## 📸 Screenshot
+
+### Dashboard Utama
+![Dashboard](./screenshots/dashboard.png)
+
+### Verifikasi Pendaftar
+![Verifikasi](./screenshots/verifikasi.png)
+
+### Manajemen Akun
+![Manajemen Akun](./screenshots/manajemen-akun.png)
+
+### Laporan & Ekspor
+![Laporan](./screenshots/laporan.png)
+
+> 💡 Simpan screenshot ke folder `/screenshots` di root proyek agar gambar tampil otomatis.
+
+---
+
+## 🚀 Cara Menjalankan Proyek
+
+Pastikan kamu sudah menginstall:
+- [Node.js](https://nodejs.org/) v18+
+- [Go](https://golang.org/) v1.21+
+- [MySQL](https://www.mysql.com/)
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/distriict12/PPDB-Online.git
+cd PPDB-Online
+```
+
+### 2. Setup Backend
+```bash
+cd backend-ppdb
+
+# Salin file environment
+cp .env.example .env
+
+# Isi konfigurasi database di file .env
+# DB_HOST=localhost
+# DB_PORT=3306
+# DB_NAME=ppdb_db
+# DB_USER=root
+# DB_PASSWORD=yourpassword
+# JWT_SECRET=your_jwt_secret
+
+# Install dependencies & jalankan server
+go mod tidy
+go run main.go
+```
+
+> Server backend berjalan di `http://localhost:8080`
+
+### 3. Setup Frontend
+```bash
+cd frontend-ppdb
+
+# Install dependencies
+npm install
+
+# Salin file environment
+cp .env.example .env
+
+# Isi base URL API di file .env
+# VITE_API_URL=http://localhost:8080
+
+# Jalankan development server
+npm run dev
+```
+
+> Aplikasi frontend berjalan di `http://localhost:5173`
+
+### 4. Setup Database
+
+Import file SQL yang tersedia ke MySQL:
+```bash
+mysql -u root -p ppdb_db < database/ppdb.sql
+```
+
+---
+
+## 👨‍💻 Pengembang
+
+Dikembangkan oleh **Mohamad Ali** ([@distriict12](https://github.com/distriict12)).
+
+Tertarik berkolaborasi atau ingin melihat proyek lainnya? Kunjungi profil GitHub saya!
+
+---
+
+📝 **Lisensi:** Proyek ini menggunakan lisensi [MIT](./LICENSE).
