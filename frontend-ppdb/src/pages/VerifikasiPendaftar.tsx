@@ -113,8 +113,8 @@
           alert("Siswa tidak melampirkan dokumen ini.");
           return;
         }
-        const backendUrl = "https://l67tfv2g-3000.asse.devtunnels.ms/"; 
-        // const backendUrl = "http://localhost:3000/"; 
+        // const backendUrl = "https://l67tfv2g-3000.asse.devtunnels.ms/"; 
+        const backendUrl = "http://localhost:3000/"; 
         window.open(backendUrl + filePath, "_blank"); 
       };
 
