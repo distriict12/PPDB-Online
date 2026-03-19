@@ -13,45 +13,48 @@ Dibangun dengan arsitektur **Full-Stack** modern — memadukan *Backend* yang ta
 
 ---
 
-## 📌 Daftar Isi
+## Fitur & Antarmuka Aplikasi
 
-- [Fitur Utama](#fitur-utama)
-- [Teknologi yang Digunakan](#teknologi-yang-digunakan)
-- [Screenshot](#screenshot)
-- [Cara Menjalankan Proyek](#cara-menjalankan-proyek)
-- [Pengembang](#pengembang)
+### Panel Admin (Pengelola)
+
+**1. Dashboard Statistik**
+Ringkasan pendaftar secara *real-time* (Total, Perlu Verifikasi, Lolos, Ditolak).
+![Dashboard Admin](https://github.com/distriict12/PPDB-Online/blob/main/public/Dashboard%20Utama-admin.png?raw=true)
+
+**2. Verifikasi Pendaftar**
+Manajemen pendaftar dengan pencarian, filter status, dan aksi verifikasi berkas (Terima/Tolak).
+![Verifikasi Admin](https://github.com/distriict12/PPDB-Online/blob/main/public/Verifikasi%20Pendaftar-admin.png?raw=true)
+
+**3. Manajemen Akun & Keamanan**
+Pengelolaan *role*, pembuatan hak akses tingkat Admin, serta akses *login* khusus pengelola sistem PPDB.
 
 ---
 
-## ✨ Fitur Utama
+### Portal Siswa (Pendaftar)
 
-### 👨‍💼 Panel Admin (Pengelola)
-| Fitur | Deskripsi |
-| :--- | :--- |
-| 🔐 **Login Admin (Sign In)** | Akses masuk aman khusus untuk pengelola sistem PPDB. |
-| 📊 **Dashboard Statistik** | Ringkasan pendaftar secara *real-time* (Total, Perlu Verifikasi, Lolos, Ditolak). |
-| 📋 **Verifikasi Pendaftar**| Manajemen pendaftar dengan pencarian, filter status, dan aksi verifikasi berkas. |
-| 👥 **Manajemen Akun** | Pengelolaan role dan pembuatan hak akses tingkat Admin. |
+**1. Registrasi & Login**
+Pembuatan akun baru dan akses masuk bagi calon peserta didik untuk memulai pendaftaran.
+![Halaman Login](https://github.com/distriict12/PPDB-Online/blob/main/public/Halaman%20Login.png?raw=true)
+![Halaman Register](https://github.com/distriict12/PPDB-Online/blob/main/public/Halaman%20Register.png?raw=true)
 
-### 🎓 Portal Siswa (Pendaftar)
-| Fitur | Deskripsi |
-| :--- | :--- |
-| 📝 **Registrasi (Sign Up)** | Pembuatan akun baru bagi calon peserta didik untuk memulai pendaftaran. |
-| 🔑 **Login (Sign In)** | Akses masuk calon siswa untuk melanjutkan atau memantau proses pendaftaran. |
-| 📄 **Formulir Pendaftaran**| Antarmuka pengisian data diri dan kelengkapan pendaftaran secara responsif. |
-| 📁 **Unggah Dokumen** | Fitur unggah berkas persyaratan pendaftaran dengan sistem validasi. |
-| 🔍 **Cek Status Lolos** | Siswa dapat memantau hasil seleksi dan status verifikasi berkas mereka secara langsung. |
+**2. Dashboard Siswa & Cek Status**
+Siswa dapat memantau hasil seleksi dan status verifikasi berkas mereka secara langsung dari panel ini.
+![Dashboard Siswa](https://github.com/distriict12/PPDB-Online/blob/main/public/Dashboard%20Utama-siswa.png?raw=true)
+
+**3. Formulir Pendaftaran & Unggah Dokumen**
+Antarmuka pengisian data diri dan kelengkapan pendaftaran secara responsif, dilengkapi sistem validasi unggah berkas.
+![Formulir Siswa](https://github.com/distriict12/PPDB-Online/blob/main/public/Formulir%20Pendaftaran-siswa.png?raw=true)
+
+---
 
 ### ⚙️ Sistem Inti (Core)
-| Fitur | Deskripsi |
-| :--- | :--- |
-| 🔒 **Autentikasi JWT** | Keamanan login berlapis dan perlindungan API menggunakan **JSON Web Token**. |
+- 🔒 **Autentikasi JWT:** Keamanan *login* berlapis dan perlindungan jalur API menggunakan **JSON Web Token**.
 
 ---
 
 ## 🛠️ Teknologi yang Digunakan
 
-**💻 Frontend**
+** Frontend**
 - [React.js](https://reactjs.org/) + [Vite](https://vitejs.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
@@ -62,24 +65,6 @@ Dibangun dengan arsitektur **Full-Stack** modern — memadukan *Backend* yang ta
 - RESTful API
 - [JWT](https://jwt.io/) — JSON Web Token
 - [MySQL](https://www.mysql.com/)
-
----
-
-## 📸 Screenshot
-
-### Dashboard Utama
-![Dashboard](./screenshots/dashboard.png)
-
-### Verifikasi Pendaftar
-![Verifikasi](./screenshots/verifikasi.png)
-
-### Manajemen Akun
-![Manajemen Akun](./screenshots/manajemen-akun.png)
-
-### Laporan & Ekspor
-![Laporan](./screenshots/laporan.png)
-
-> 💡 Simpan screenshot ke folder `/screenshots` di root proyek agar gambar tampil otomatis.
 
 ---
 
