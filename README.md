@@ -52,7 +52,7 @@ Antarmuka pengisian data diri dan kelengkapan pendaftaran secara responsif, dile
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## Teknologi yang Digunakan
 
 ** Frontend**
 - [React.js](https://reactjs.org/) + [Vite](https://vitejs.dev/)
@@ -70,64 +70,54 @@ Antarmuka pengisian data diri dan kelengkapan pendaftaran secara responsif, dile
 
 ## 🚀 Cara Menjalankan Proyek
 
-Pastikan kamu sudah menginstall:
+Install terlebih dahulu dependensi berikut:
 - [Node.js](https://nodejs.org/) v18+
 - [Go](https://golang.org/) v1.21+
 - [MySQL](https://www.mysql.com/)
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/distriict12/PPDB-Online.git
+git clone [https://github.com/distriict12/PPDB-Online.git](https://github.com/distriict12/PPDB-Online.git)
 cd PPDB-Online
-```
 
-### 2. Setup Backend
+### 2. Setup Database
 ```bash
+Buat terlebih dahulu database kosong di MySQL sebelum menjalankan backend:
+CREATE DATABASE db_ppdb;
+
+### 3. Setup Backend
+```bash
+Masuk ke folder backend dan lakukan konfigurasi berikut:
 cd backend-ppdb
 
-# Salin file environment
-cp .env.example .env
+Buat file .env di dalam folder tersebut dan isi dengan konfigurasi berikut:
+APP_PORT=3000
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASS=(password_mysql_kamu)
+DB_NAME=db_ppdb
+JWT_SECRET=(rahasia_jwt_kamu)
 
-# Isi konfigurasi database di file .env
-# DB_HOST=localhost
-# DB_PORT=3306
-# DB_NAME=ppdb_db
-# DB_USER=root
-# DB_PASSWORD=yourpassword
-# JWT_SECRET=your_jwt_secret
-
-# Install dependencies & jalankan server
+Install dependensi:
 go mod tidy
+
+Jalankan server:
 go run main.go
-```
 
-> Server backend berjalan di `http://localhost:8080`
+> Server backend berjalan di `http://localhost:3000`
 
-### 3. Setup Frontend
-```bash
+### 4. Setup Frontend
+Masuk ke folder frontend dan jalankan aplikasi:
 cd frontend-ppdb
 
-# Install dependencies
+Install dependensi:
 npm install
 
-# Salin file environment
-cp .env.example .env
-
-# Isi base URL API di file .env
-# VITE_API_URL=http://localhost:8080
-
-# Jalankan development server
+Jalankan development server:
 npm run dev
-```
 
 > Aplikasi frontend berjalan di `http://localhost:5173`
-
-### 4. Setup Database
-
-Import file SQL yang tersedia ke MySQL:
-```bash
-mysql -u root -p ppdb_db < database/ppdb.sql
-```
 
 ---
 
