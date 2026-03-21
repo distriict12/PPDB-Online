@@ -79,44 +79,49 @@ Install terlebih dahulu dependensi berikut:
 ```bash
 git clone [https://github.com/distriict12/PPDB-Online.git](https://github.com/distriict12/PPDB-Online.git)
 cd PPDB-Online
+```
 
 ### 2. Setup Database
-```bash
-Buat terlebih dahulu database kosong di MySQL sebelum menjalankan backend:
+Buat terlebih dahulu database kosong di MySQL lokal kamu sebelum menjalankan backend:
+```sql
 CREATE DATABASE db_ppdb;
+```
 
 ### 3. Setup Backend
+Masuk ke folder backend:
 ```bash
-Masuk ke folder backend dan lakukan konfigurasi berikut:
 cd backend-ppdb
+```
 
-Buat file .env di dalam folder tersebut dan isi dengan konfigurasi berikut:
+Buat file `.env` di dalam folder tersebut dan isi dengan konfigurasi berikut:
+```env
 APP_PORT=3000
 DB_HOST=localhost
 DB_PORT=3306
 DB_USER=root
-DB_PASS=(password_mysql_kamu)
+DB_PASS=password_mysql_kamu
 DB_NAME=db_ppdb
-JWT_SECRET=(rahasia_jwt_kamu)
+JWT_SECRET=rahasia_jwt_kamu
+```
 
-Install dependensi:
+Install dependensi dan jalankan server:
+```bash
 go mod tidy
-
-Jalankan server:
 go run main.go
-
+```
 > Server backend berjalan di `http://localhost:3000`
 
 ### 4. Setup Frontend
-Masuk ke folder frontend dan jalankan aplikasi:
+Buka tab terminal baru (biarkan server backend tetap berjalan), lalu masuk ke folder frontend:
+```bash
 cd frontend-ppdb
+```
 
-Install dependensi:
+Install dependensi dan jalankan development server:
+```bash
 npm install
-
-Jalankan development server:
 npm run dev
-
+```
 > Aplikasi frontend berjalan di `http://localhost:5173`
 
 ---
