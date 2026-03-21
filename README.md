@@ -99,9 +99,9 @@ APP_PORT=3000
 DB_HOST=localhost
 DB_PORT=3306
 DB_USER=root
-DB_PASS=password_mysql_kamu
+DB_PASS=(password mysql kamu)
 DB_NAME=db_ppdb
-JWT_SECRET=rahasia_jwt_kamu
+JWT_SECRET=(rahasia jwt kamu)
 ```
 
 Install dependensi dan jalankan server:
@@ -128,10 +128,16 @@ npm run dev
 
 ## 👨‍💻 Pengembang
 
-Dikembangkan oleh **Mohamad Ali** ([@distriict12](https://github.com/distriict12)).
+Dikembangkan dengan penuh dedikasi oleh **Mohamad Ali** 🚀
 
-Tertarik berkolaborasi atau ingin melihat proyek lainnya? Kunjungi profil GitHub saya!
+Tertarik berkolaborasi, diskusi teknologi, atau sekadar *networking*? Mari terhubung melalui:
+
+[![GitHub](https://img.shields.io/badge/GitHub-distriict12-181717?style=for-the-badge&logo=github)](https://github.com/distriict12)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Mohamad_Ali-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/username-linkedin-kapten/)
+[![Email](https://img.shields.io/badge/Email-Hubungi_Saya-EA4335?style=for-the-badge&logo=gmail)](mailto:email.pve.mohamadali@gmail.com)
+
+⭐ *Jika kamu menyukai proyek ini atau merasa terbantu, jangan ragu untuk memberikan bintang (Star) pada repository ini!*
 
 ---
 
-📝 **Lisensi:** Proyek ini menggunakan lisensi [MIT](./LICENSE).
+📝 **Lisensi:** Proyek ini didistribusikan di bawah lisensi [MIT](./LICENSE).
