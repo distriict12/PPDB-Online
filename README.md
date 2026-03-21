@@ -71,8 +71,8 @@ Antarmuka pengisian data diri dan kelengkapan pendaftaran secara responsif, dile
 ## 🚀 Cara Menjalankan Proyek
 
 Install terlebih dahulu dependensi berikut:
-- [Node.js](https://nodejs.org/) v18+
-- [Go](https://golang.org/) v1.21+
+- [Node.js](https://nodejs.org/) v20+ (Direkomendasikan v22+)
+- [Go](https://golang.org/) v1.25+
 - [MySQL](https://www.mysql.com/)
 
 ### 1. Clone Repository
