@@ -13,45 +13,48 @@ Dibangun dengan arsitektur **Full-Stack** modern — memadukan *Backend* yang ta
 
 ---
 
-## 📌 Daftar Isi
+## Fitur & Antarmuka Aplikasi
 
-- [Fitur Utama](#fitur-utama)
-- [Teknologi yang Digunakan](#teknologi-yang-digunakan)
-- [Screenshot](#screenshot)
-- [Cara Menjalankan Proyek](#cara-menjalankan-proyek)
-- [Pengembang](#pengembang)
+### Panel Admin (Pengelola)
+
+**1. Dashboard Statistik**
+Ringkasan pendaftar secara *real-time* (Total, Perlu Verifikasi, Lolos, Ditolak).
+![Dashboard Admin](https://github.com/distriict12/PPDB-Online/blob/main/public/Dashboard%20Utama-admin.png?raw=true)
+
+**2. Verifikasi Pendaftar**
+Manajemen pendaftar dengan pencarian, filter status, dan aksi verifikasi berkas (Terima/Tolak).
+![Verifikasi Admin](https://github.com/distriict12/PPDB-Online/blob/main/public/Verifikasi%20Pendaftar-admin.png?raw=true)
+
+**3. Manajemen Akun & Keamanan**
+Pengelolaan *role*, pembuatan hak akses tingkat Admin, serta akses *login* khusus pengelola sistem PPDB.
 
 ---
 
-## ✨ Fitur Utama
+### Portal Siswa (Pendaftar)
 
-### 👨‍💼 Panel Admin (Pengelola)
-| Fitur | Deskripsi |
-| :--- | :--- |
-| 🔐 **Login Admin (Sign In)** | Akses masuk aman khusus untuk pengelola sistem PPDB. |
-| 📊 **Dashboard Statistik** | Ringkasan pendaftar secara *real-time* (Total, Perlu Verifikasi, Lolos, Ditolak). |
-| 📋 **Verifikasi Pendaftar**| Manajemen pendaftar dengan pencarian, filter status, dan aksi verifikasi berkas. |
-| 👥 **Manajemen Akun** | Pengelolaan role dan pembuatan hak akses tingkat Admin. |
+**1. Registrasi & Login**
+Pembuatan akun baru dan akses masuk bagi calon peserta didik untuk memulai pendaftaran.
+![Halaman Login](https://github.com/distriict12/PPDB-Online/blob/main/public/Halaman%20Login.png?raw=true)
+![Halaman Register](https://github.com/distriict12/PPDB-Online/blob/main/public/Halaman%20Register.png?raw=true)
 
-### 🎓 Portal Siswa (Pendaftar)
-| Fitur | Deskripsi |
-| :--- | :--- |
-| 📝 **Registrasi (Sign Up)** | Pembuatan akun baru bagi calon peserta didik untuk memulai pendaftaran. |
-| 🔑 **Login (Sign In)** | Akses masuk calon siswa untuk melanjutkan atau memantau proses pendaftaran. |
-| 📄 **Formulir Pendaftaran**| Antarmuka pengisian data diri dan kelengkapan pendaftaran secara responsif. |
-| 📁 **Unggah Dokumen** | Fitur unggah berkas persyaratan pendaftaran dengan sistem validasi. |
-| 🔍 **Cek Status Lolos** | Siswa dapat memantau hasil seleksi dan status verifikasi berkas mereka secara langsung. |
+**2. Dashboard Siswa & Cek Status**
+Siswa dapat memantau hasil seleksi dan status verifikasi berkas mereka secara langsung dari panel ini.
+![Dashboard Siswa](https://github.com/distriict12/PPDB-Online/blob/main/public/Dashboard%20Utama-siswa.png?raw=true)
+
+**3. Formulir Pendaftaran & Unggah Dokumen**
+Antarmuka pengisian data diri dan kelengkapan pendaftaran secara responsif, dilengkapi sistem validasi unggah berkas.
+![Formulir Siswa](https://github.com/distriict12/PPDB-Online/blob/main/public/Formulir%20Pendaftaran-siswa.png?raw=true)
+
+---
 
 ### ⚙️ Sistem Inti (Core)
-| Fitur | Deskripsi |
-| :--- | :--- |
-| 🔒 **Autentikasi JWT** | Keamanan login berlapis dan perlindungan API menggunakan **JSON Web Token**. |
+- 🔒 **Autentikasi JWT:** Keamanan *login* berlapis dan perlindungan jalur API menggunakan **JSON Web Token**.
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## Teknologi yang Digunakan
 
-**💻 Frontend**
+** Frontend**
 - [React.js](https://reactjs.org/) + [Vite](https://vitejs.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
@@ -65,93 +68,77 @@ Dibangun dengan arsitektur **Full-Stack** modern — memadukan *Backend* yang ta
 
 ---
 
-## 📸 Screenshot
-
-### Dashboard Utama
-![Dashboard](./screenshots/dashboard.png)
-
-### Verifikasi Pendaftar
-![Verifikasi](./screenshots/verifikasi.png)
-
-### Manajemen Akun
-![Manajemen Akun](./screenshots/manajemen-akun.png)
-
-### Laporan & Ekspor
-![Laporan](./screenshots/laporan.png)
-
-> 💡 Simpan screenshot ke folder `/screenshots` di root proyek agar gambar tampil otomatis.
-
----
-
 ## 🚀 Cara Menjalankan Proyek
 
-Pastikan kamu sudah menginstall:
-- [Node.js](https://nodejs.org/) v18+
-- [Go](https://golang.org/) v1.21+
+Install terlebih dahulu dependensi berikut:
+- [Node.js](https://nodejs.org/) v20+ (Direkomendasikan v22+)
+- [Go](https://golang.org/) v1.25+
 - [MySQL](https://www.mysql.com/)
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/distriict12/PPDB-Online.git
+git clone [https://github.com/distriict12/PPDB-Online.git](https://github.com/distriict12/PPDB-Online.git)
 cd PPDB-Online
 ```
 
-### 2. Setup Backend
+### 2. Setup Database
+Buat terlebih dahulu database kosong di MySQL lokal kamu sebelum menjalankan backend:
+```sql
+CREATE DATABASE db_ppdb;
+```
+
+### 3. Setup Backend
+Masuk ke folder backend:
 ```bash
 cd backend-ppdb
+```
 
-# Salin file environment
-cp .env.example .env
+Buat file `.env` di dalam folder tersebut dan isi dengan konfigurasi berikut:
+```env
+APP_PORT=3000
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASS=(password mysql kamu)
+DB_NAME=db_ppdb
+JWT_SECRET=(rahasia jwt kamu)
+```
 
-# Isi konfigurasi database di file .env
-# DB_HOST=localhost
-# DB_PORT=3306
-# DB_NAME=ppdb_db
-# DB_USER=root
-# DB_PASSWORD=yourpassword
-# JWT_SECRET=your_jwt_secret
-
-# Install dependencies & jalankan server
+Install dependensi dan jalankan server:
+```bash
 go mod tidy
 go run main.go
 ```
+> Server backend berjalan di `http://localhost:3000`
 
-> Server backend berjalan di `http://localhost:8080`
-
-### 3. Setup Frontend
+### 4. Setup Frontend
+Buka tab terminal baru (biarkan server backend tetap berjalan), lalu masuk ke folder frontend:
 ```bash
 cd frontend-ppdb
+```
 
-# Install dependencies
+Install dependensi dan jalankan development server:
+```bash
 npm install
 
-# Salin file environment
-cp .env.example .env
-
-# Isi base URL API di file .env
-#   =http://localhost:8080
-
-# Jalankan development server
 npm run dev
 ```
-
 > Aplikasi frontend berjalan di `http://localhost:5173`
-
-### 4. Setup Database
-
-Import file SQL yang tersedia ke MySQL:
-```bash
-mysql -u root -p ppdb_db < database/ppdb.sql
-```
 
 ---
 
 ## 👨‍💻 Pengembang
 
-Dikembangkan oleh **Mohamad Ali** ([@distriict12](https://github.com/distriict12)).
+Dikembangkan dengan penuh dedikasi oleh **Mohamad Ali** 🚀
 
-Tertarik berkolaborasi atau ingin melihat proyek lainnya? Kunjungi profil GitHub saya!
+Tertarik berkolaborasi, diskusi teknologi, atau sekadar *networking*? Mari terhubung melalui:
+
+[![GitHub](https://img.shields.io/badge/GitHub-distriict12-181717?style=for-the-badge&logo=github)](https://github.com/distriict12)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Mohamad_Ali-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/username-linkedin-kapten/)
+[![Email](https://img.shields.io/badge/Email-Hubungi_Saya-EA4335?style=for-the-badge&logo=gmail)](mailto:email.pve.mohamadali@gmail.com)
+
+⭐ *Jika kamu menyukai proyek ini atau merasa terbantu, jangan ragu untuk memberikan bintang (Star) pada repository ini!*
 
 ---
 
-📝 **Lisensi:** Proyek ini menggunakan lisensi [MIT](./LICENSE).
+📝 **Lisensi:** Proyek ini didistribusikan di bawah lisensi [MIT](./LICENSE).
