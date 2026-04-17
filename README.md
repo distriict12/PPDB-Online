@@ -129,7 +129,7 @@ npm install
 cp .env.example .env
 
 # Isi base URL API di file .env
-# VITE_API_URL=http://localhost:8080
+#   =http://localhost:8080
 
 # Jalankan development server
 npm run dev
